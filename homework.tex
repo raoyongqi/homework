@@ -126,15 +126,94 @@
 
 
 						\subsection{}
-
 \[
 \begin{array}{rcl}
-	\lim_{x \to \infty} \left( \frac{x}{1+x} \right)^x 
-	& = & \lim_{x \to \infty} e^{x \ln\left( \frac{x}{1+x} \right)} \\
-	& = & \lim_{x \to \infty} e^{x \left( \ln x - \ln(1+x) \right)} \\
-	& = & \lim_{x \to \infty} e^{x \left( \ln x - \left( \ln x + \frac{1}{x} \right) \right)} \\
-	& = & \lim_{x \to \infty} e^{-1} \\
-	& = & \frac{1}{e}.
+	\lim_{x \to \infty} \left(1 - \frac{1}{x} \right)^{kx} 
+	& = & \lim_{x \to \infty} \left[\left(1 - \frac{1}{x}\right)^{x}\right]^k \\
+	& = & \left(\lim_{x \to \infty} \left(1 - \frac{1}{x}\right)^{x}\right)^{k} \quad \text{(using the known limit)} \\
+	& = & (e^{-1})^{k} \\
+	& = & e^{-k}.
 \end{array}
 \]
+
+
+\section{}
+						\subsection{}
+\[
+\begin{array}{rcl}
+	\lim_{x \to 1} \frac{1 - x^2}{1 - x} 
+	& = & \lim_{x \to 1} \frac{(1 - x)(1 + x)}{1 - x} \quad \text{(factoring the numerator)} \\
+	& = & \lim_{x \to 1} (1 + x) \quad \text{(canceling the common factor)} \\
+	& = & 1 + 1 \\
+	& = & 2.
+\end{array}
+\]
+					\section{}
+						\subsection{}
+\[
+\begin{array}{rcl}
+	\lim_{x \to \infty} \frac{x^2 - 2x + 1}{x^2 + 1} 
+	& = & \lim_{x \to \infty} \frac{x^2(1 - \frac{2}{x} + \frac{1}{x^2})}{x^2(1 + \frac{1}{x^2})} \quad \text{(factoring out } x^2 \text{)} \\
+	& = & \lim_{x \to \infty} \frac{1 - \frac{2}{x} + \frac{1}{x^2}}{1 + \frac{1}{x^2}} \quad \text{(canceling } x^2 \text{)} \\
+	& = & \frac{1 - 0 + 0}{1 + 0} \quad \text{(as } x \to \infty \text{)} \\
+	& = & 1.
+\end{array}
+\]
+
+						\subsection{}
+\[
+\begin{array}{rcl}
+	\lim_{x \to \infty} \frac{x^2 - 1}{2x^2 + x + 1} 
+	& = & \lim_{x \to \infty} \frac{x^2(1 - \frac{1}{x^2})}{x^2(2 + \frac{1}{x} + \frac{1}{x^2})} \quad \text{(factoring out } x^2 \text{)} \\
+	& = & \lim_{x \to \infty} \frac{1 - \frac{1}{x^2}}{2 + \frac{1}{x} + \frac{1}{x^2}} \quad \text{(canceling } x^2 \text{)} \\
+	& = & \frac{1 - 0}{2 + 0 + 0} \quad \text{(as } x \to \infty \text{)} \\
+	& = & \frac{1}{2}.
+\end{array}
+\]
+
+
+\subsection{}
+\[
+\begin{array}{rcl}
+	\lim_{x \to \infty} \frac{100x^2 + 1}{2x^3 - 100x} 
+	& = & \lim_{x \to \infty} \frac{x^2(100 + \frac{1}{x^2})}{x^3(2 - \frac{100}{x^2})} \quad \text{(factoring out } x^2 \text{ and } x^3 \text{)} \\
+	& = & \lim_{x \to \infty} \frac{100 + \frac{1}{x^2}}{x(2 - \frac{100}{x^2})} \quad \text{(simplifying)} \\
+	& = & \frac{100 + 0}{\infty(2 - 0)} \quad \text{(as } x \to \infty \text{)} \\
+	& = & 0.
+\end{array}
+\]
+
+\subsection{}
+\[
+\begin{array}{rcl}
+	\lim_{x \to 1} \left(\frac{1}{1-x} - \frac{3}{1-x^3}\right) 
+	& = & \lim_{x \to 1} \left(\frac{1}{1-x} - \frac{3}{(1-x)(1+x+x^2)}\right) \quad \text{(using } 1 - x^3 = (1-x)(1+x+x^2)\text{)} \\
+	& = & \lim_{x \to 1} \frac{(1+x+x^2) - 3}{(1-x)(1+x+x^2)} \\
+	& = & \lim_{x \to 1} \frac{x^2 + x - 2}{(1-x)(1+x+x^2)} \\
+	& = & \lim_{x \to 1} \frac{(x - 1)(x + 2)}{(1 - x)(1 + x + x^2)} \\
+	& = & \lim_{x \to 1} \frac{-(1-x)(x + 2)}{(1 - x)(1 + x + x^2)} \\
+	& = & \lim_{x \to 1} \frac{-(x + 2)}{1 + x + x^2} \\
+	& = & \frac{-(1 + 2)}{1 + 1 + 1} \\
+	& = & \frac{-3}{3} \\
+	& = & -1.
+\end{array}
+\]
+\subsection{}
+\[
+\begin{array}{rcl}
+	\lim_{x \to \infty} \left(\sqrt{x^2+x} - \sqrt{x^2-x} \right) 
+	& = & \lim_{x \to \infty} \left(\sqrt{x^2+x} - \sqrt{x^2-x} \right) \cdot \frac{\sqrt{x^2+x} + \sqrt{x^2-x}}{\sqrt{x^2+x} + \sqrt{x^2-x}} 
+	 \\ \quad \text{(multiply by the conjugate)} \\
+	& = & \lim_{x \to \infty} \frac{(x^2+x) - (x^2-x)}{\sqrt{x^2+x} + \sqrt{x^2-x}} \\
+	& = & \lim_{x \to \infty} \frac{2x}{\sqrt{x^2+x} + \sqrt{x^2-x}} \\
+	& = & \lim_{x \to \infty} \frac{2x}{\sqrt{x^2(1+\frac{1}{x})} + \sqrt{x^2(1-\frac{1}{x})}} \quad \text{(factor out } x^2\text{)} \\
+	& = & \lim_{x \to \infty} \frac{2x}{x\left(\sqrt{1+\frac{1}{x}} + \sqrt{1-\frac{1}{x}}\right)} \quad \text{(cancel } x\text{)} \\
+	& = & \lim_{x \to \infty} \frac{2}{\sqrt{1+\frac{1}{x}} + \sqrt{1-\frac{1}{x}}} \\
+	& = & \frac{2}{\sqrt{1+0} + \sqrt{1-0}} \quad \text{(as } x \to \infty\text{)} \\
+	& = & \frac{2}{1 + 1} \\
+	& = & 1.
+\end{array}
+\]
+
+
 \end{document}
